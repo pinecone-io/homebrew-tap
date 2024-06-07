@@ -5,12 +5,12 @@
 class PineconeDev < Formula
   desc ""
   homepage ""
-  version "0.0.16"
+  version "0.0.19"
   license "Apache-2.0"
   depends_on :macos
 
-  url "https://github.com/pinecone-io/cli/releases/download/v0.0.16/pinecone_Darwin_all.tar.gz"
-  sha256 "6f09681b76d6f1c63e021c990467e3be435b0867dbcd9ca243784cd70a26b8e8"
+  url "https://github.com/pinecone-io/cli/releases/download/v0.0.19/pinecone_Darwin_all.tar.gz"
+  sha256 "6e17276c4116c2561c0f03846c7ede325ca09fdbc2b60c04e636bdeb79605e69"
 
   def install
     bin.install "pinecone"
