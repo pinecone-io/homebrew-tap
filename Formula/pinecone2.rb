@@ -1,11 +1,11 @@
 class YourApp < Formula
-  desc "Description of your app"
-  homepage "https://example.com"
-  version "1.0.0"
+  desc "Pinecone CLI"
+  homepage "https://github.com/pinecone-io/cli"
+  version "0.0.19"
 
   if OS.mac?
     url "https://storage.googleapis.com/pinecone-cli/0.0.19/pinecone_Darwin_all.tar.gz"
-    sha256 "SHA256_CHECKSUM_FOR_DARWIN_AMD64"
+    sha256 "6e17276c4116c2561c0f03846c7ede325ca09fdbc2b60c04e636bdeb79605e69"
   # elsif OS.mac? && Hardware::CPU.arm?
   #   url "https://storage.googleapis.com/your-bucket/your-app-1.0.0-darwin-arm64.tar.gz"
   #   sha256 "SHA256_CHECKSUM_FOR_DARWIN_ARM64"
@@ -26,10 +26,13 @@ class YourApp < Formula
   end
 
   def install
-    bin.install "your-app"
+    bin.install "pinecone"
+    if OS.mac?
+      system "xattr", "-d", "com.apple.quarantine", "#{bin}/pinecone"
+    end
   end
 
   test do
-    system "#{bin}/your-app", "--version"
+    system "#{bin}/pinecone", "--help"
   end
 end
