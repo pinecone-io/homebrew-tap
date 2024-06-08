@@ -27,9 +27,9 @@ class Pinecone < Formula
 
   def install
     bin.install "pinecone"
-    if OS.mac?
-      system "xattr", "-d", "com.apple.quarantine", "#{bin}/pinecone"
-    end
+    # if OS.mac?
+    #   system "xattr", "-d", "com.apple.quarantine", "#{bin}/pinecone"
+    # end
   end
 
   test do
