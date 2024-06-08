@@ -1,4 +1,4 @@
-class Pinecone2 < Formula
+class Pinecone < Formula
   desc "Pinecone CLI"
   homepage "https://github.com/pinecone-io/cli"
   version "0.0.19"
