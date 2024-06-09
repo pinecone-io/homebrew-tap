@@ -34,6 +34,6 @@ class PineconeDev < Formula
   end
 
   test do
-    system "#{bin}/pinecone", "--help"
+    system "#{bin}/pineconedev", "--help"
   end
 end
