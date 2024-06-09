@@ -25,14 +25,10 @@ jobs:
             linux_intel_sha=$(cat /tmp/checksums.txt | grep pinecone_Linux_x86_64.tar.gz | awk '{print $1}')
             linux_arm_sha=$(cat /tmp/checksums.txt | grep pinecone_Linux_arm64.tar.gz | awk '{print $1}')
 
-            echo "Mac SHA: $mac_sha"
-            echo "Linux Intel SHA: $linux_intel_sha"
-            echo "Linux ARM SHA: $linux_arm_sha"
-
-            echo s/##RELEASE_VERSION##/${{ inputs.version }}/g' > sed_commands.sed
-            echo s/##MAC_SHA##/${mac_sha}/g' >> sed_commands.sed
-            echo s/##LINUX_INTEL_SHA##/${linux_intel_sha}/g' >> sed_commands.sed
-            echo s/##LINUX_ARM_SHA##/${linux_arm_sha}/g' >> sed_commands.sed
+            echo 's/##RELEASE_VERSION##/${{ inputs.version }}/g' > sed_commands.sed
+            echo 's/##MAC_SHA##/${mac_sha}/g' >> sed_commands.sed
+            echo 's/##LINUX_INTEL_SHA##/${linux_intel_sha}/g' >> sed_commands.sed
+            echo 's/##LINUX_ARM_SHA##/${linux_arm_sha}/g' >> sed_commands.sed
 
             sed -i -f sed_commands.sed .github/workflows/pinecone-dev.template.rb
             cat .github/workflows/pinecone-dev.template.rb
