@@ -1,0 +1,23 @@
+name: Goreleaser Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'CLI version'
+        required: true
+        default: '0.0.21'
+
+jobs:
+    publish:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+        - name: Download checksums from latest release
+          run: |
+            curl "https://storage.googleapis.com/pinecone-cli/${{ inputs.version }}/pinecone_${{ inputs.version }}_checksums.txt" > /tmp/checksums.txt
+            cat /tmp/checksums.txt
+            
