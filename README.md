@@ -14,7 +14,7 @@ This is Pinecone's official [Homebrew tap](https://docs.brew.sh/Taps). Homebrew 
 
 ## Install
 
-If you are a pinecone employee working on this prior to public release, please see these allternate instructions.
+If you are a pinecone employee working on this prior to public release, please see these [allternate instructions](./CONTRIBUTING.md).
 
 ### Install the tap
 
