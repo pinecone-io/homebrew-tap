@@ -1,6 +1,12 @@
 name: Update pinecone-dev cli formula
 
 on:
+  workflow_call:
+    inputs:
+      version:
+        type: string
+        description: 'CLI version'
+        required: true
   workflow_dispatch:
     inputs:
       version:
