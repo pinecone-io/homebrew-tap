@@ -1,4 +1,4 @@
-name: Goreleaser Publish
+name: Update pinecone-dev cli formula
 
 on:
   workflow_dispatch:
