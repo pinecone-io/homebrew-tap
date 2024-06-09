@@ -29,13 +29,7 @@ The non-dev `pinecone.rb` formula installable as `brew install pinecone-io/tap/p
 
 ## Updating the pinecone-dev formula
 
-For now we hand-edit the `pinecone-dev.rb` file to update the links and shasums. 
-
-**Updating links.** To update the links, you should only have to find-and-replace the version numbers since the names and urls are stable aside from the version number component. 
-
-**Updating shasums.** The shasums you should be able to copy/paste out of `pinecone.rb` where goreleaser has automatically updated them.
-
-Commit and push the changes to this repository. Then run `brew upgrade pinecone-io/tap/pinecone-dev` on your local machine.
+The `pinecone-dev.rb` formula is updated by running the `update-dev-formula.yaml` workflow. This should be automatically triggered after every run of the `publish` workflow in the CLI repo, so in general it shouldn't need to be run manually.
 
 ## Adding / changing / deleting formulas.
 
