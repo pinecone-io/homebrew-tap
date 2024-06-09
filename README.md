@@ -1,8 +1,12 @@
 # Homebrew Tap for Pinecone
 
+Pinecone employees should see development information in [CONTRIBUTING](./CONTRIBUTING.md)
+
 ### What is Homebrew?
 
-Homebrew is a package manager primarily used by Mac OS and some Linux users. See  [https://brew.sh](https://brew.sh/) for details. Before you can use formulas from our tap, you must [Install Homebrew](https://brew.sh/)
+Homebrew is a package manager primarily used by Mac OS and some Linux users. See  [https://brew.sh](https://brew.sh/) for details. 
+
+Before you can use formulas from our tap, you must [Install Homebrew](https://brew.sh/).
 
 ### What is a Tap?
 
@@ -10,10 +14,12 @@ This is Pinecone's official [Homebrew tap](https://docs.brew.sh/Taps). Homebrew 
 
 ## Install
 
+If you are a pinecone employee working on this prior to public release, please see these allternate instructions.
+
 ### Install the tap
 
 ```sh
-brew tap pinecone-io/tap git@github.com:pinecone-io/homebrew-tap
+brew tap pinecone-io/tap
 ```
 
 ### Install the Pinecone CLI
