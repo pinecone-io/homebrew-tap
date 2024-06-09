@@ -3,17 +3,17 @@
 class PineconeDev < Formula
     desc "Pinecone CLI"
     homepage "https://github.com/pinecone-io/cli"
-    version "0.0.30"
+    version "0.0.31"
   
     if OS.mac?
-      url "https://storage.googleapis.com/pinecone-cli/0.0.30/pinecone_Darwin_all.tar.gz"
-      sha256 "3e5d027a5dbac3e9d92b92aef9b4552c27b85aefae3fe6e0899cacbfa9b3abc1"
+      url "https://storage.googleapis.com/pinecone-cli/0.0.31/pinecone_Darwin_all.tar.gz"
+      sha256 "8182a489819be42c603518182228f43a6942084fcbcd60e7668e297366f4643f"
     elsif OS.linux? && Hardware::CPU.intel?
-      url "https://storage.googleapis.com/pinecone-cli/0.0.30/pinecone_Linux_x86_64.tar.gz"
-      sha256 "cbabab25a715fad48e6532b83c0bf0cb265c62a6d3e29d0c508653130a7842a6"
+      url "https://storage.googleapis.com/pinecone-cli/0.0.31/pinecone_Linux_x86_64.tar.gz"
+      sha256 "3ce5db3c40261c2d57f278ff581562ba99b1a8e7e7cf7cc2d7c1dae6463ce1c8"
     elsif OS.linux? && Hardware::CPU.arm?
-      url "https://storage.googleapis.com/pinecone-cli/0.0.30/pinecone_Linux_arm64.tar.gz"
-      sha256 "b54a5d5e83dd921f3fef4128af277f3fba01fc9650ff2ffd4786391016c6cb6b"
+      url "https://storage.googleapis.com/pinecone-cli/0.0.31/pinecone_Linux_arm64.tar.gz"
+      sha256 "70c4aec0b905486c1eba38756615fe3194c934c7db424bb6d444c1b4f6dd459b"
     else
       odie "Unsupported platform"
     end
