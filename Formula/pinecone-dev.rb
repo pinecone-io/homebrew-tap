@@ -22,7 +22,7 @@ class PineconeDev < Formula
   end
 
   def install
-    bin.install "pineconedev"
+    bin.install "pinecone"
 
     ## I thought we would need to remove this attribute, but it seems to be
     ## unnecessary because the curl downloads that occur underneath the hood
@@ -34,6 +34,6 @@ class PineconeDev < Formula
   end
 
   test do
-    system "#{bin}/pineconedev", "--help"
+    system "#{bin}/pinecone", "--help"
   end
 end
