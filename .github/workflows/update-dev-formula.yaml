@@ -31,4 +31,12 @@ jobs:
             echo "s/##LINUX_ARM_SHA##/${linux_arm_sha}/g" >> sed_commands.sed
 
             sed -i -f sed_commands.sed .github/workflows/pinecone-dev.template.rb
-            cat .github/workflows/pinecone-dev.template.rb
+            cat .github/workflows/pinecone-dev.template.rb > Formula/pinecone-dev.rb
+
+        - name: Commit changes
+          run: |
+            git config --global user.email "clients@pinecone.io"
+            git config --global user.name "Pinecone CI"
+            git add Formula/pinecone-dev.rb
+            git commit -m "Update pinecone-dev to version ${{ inputs.version }}"
+            git push
