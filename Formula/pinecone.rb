@@ -5,12 +5,12 @@
 class Pinecone < Formula
   desc "Pinecone CLI"
   homepage "https://www.pinecone.io"
-  version "0.0.47"
+  version "0.0.48"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/pinecone-io/cli/releases/download/v0.0.47/pinecone_Darwin_all.tar.gz"
-    sha256 "0cd89a24c3059bc3bc33f9664709bc333b11f2b6ae0350c81bf90a81334f76ae"
+    url "https://github.com/pinecone-io/cli/releases/download/v0.0.48/pinecone_Darwin_all.tar.gz"
+    sha256 "bfe42f432bd24c936d25fbe882ed646da672b499a7fcc4d3cd454b305c3a8dcc"
 
     def install
       bin.install "pinecone"
@@ -20,8 +20,8 @@ class Pinecone < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pinecone-io/cli/releases/download/v0.0.47/pinecone_Linux_x86_64.tar.gz"
-        sha256 "9e6ae221eb3c90ee843445d68d18cbe5e64bc3c3ab4d69289026a6eadf76094e"
+        url "https://github.com/pinecone-io/cli/releases/download/v0.0.48/pinecone_Linux_x86_64.tar.gz"
+        sha256 "ac71c51975d85a324b98bed34e0fb3a59cc6f821929f6ec1facd3aedbe14ca57"
 
         def install
           bin.install "pinecone"
@@ -30,8 +30,8 @@ class Pinecone < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pinecone-io/cli/releases/download/v0.0.47/pinecone_Linux_arm64.tar.gz"
-        sha256 "c2b7c1f1d62a71849c9e708866c3993aa3b617dca021d5cc3d56f2ad2b31a66e"
+        url "https://github.com/pinecone-io/cli/releases/download/v0.0.48/pinecone_Linux_arm64.tar.gz"
+        sha256 "0e681a6ef7d5635aa488d3bf1042133cf8eedc5a9b6bd1b07d3c19c8777a0756"
 
         def install
           bin.install "pinecone"
