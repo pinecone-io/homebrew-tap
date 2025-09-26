@@ -5,12 +5,12 @@
 class Pinecone < Formula
   desc "Pinecone CLI"
   homepage "https://www.pinecone.io"
-  version "0.0.57"
+  version "0.0.58"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/pinecone-io/cli/releases/download/v0.0.57/pc_Darwin_all.tar.gz"
-    sha256 "d12a5af762b7d04c763801a4cf65170211f44e151d72e922e396c5e21b8b4f19"
+    url "https://github.com/pinecone-io/cli/releases/download/v0.0.58/pc_Darwin_all.tar.gz"
+    sha256 "27169626b29d096e63a3b25bcce7072995a4a688017ec6e8dcbc1cefcc4d739c"
 
     def install
       bin.install "pc"
@@ -19,17 +19,17 @@ class Pinecone < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pinecone-io/cli/releases/download/v0.0.57/pc_Linux_x86_64.tar.gz"
-      sha256 "2b7facf7ac343a428c1aa3a62bd6f763fc61f01ac5d3b55021f79b9496081196"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pinecone-io/cli/releases/download/v0.0.58/pc_Linux_x86_64.tar.gz"
+      sha256 "63e0e1f8269ff1908dac7a6b3d094ba540f40547a3aec9808d351c94974a8067"
       def install
         bin.install "pc"
         bin.install_symlink "pc" => "pinecone"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pinecone-io/cli/releases/download/v0.0.57/pc_Linux_arm64.tar.gz"
-      sha256 "996ca7efa3c54c06b489c033c927c767d0bbe02a9d95771ac708166296e11e2a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pinecone-io/cli/releases/download/v0.0.58/pc_Linux_arm64.tar.gz"
+      sha256 "abc6a5dd42126bd495da6b282dc054a62663af4a35eacd0bc14ddab3c05e4a0f"
       def install
         bin.install "pc"
         bin.install_symlink "pc" => "pinecone"
