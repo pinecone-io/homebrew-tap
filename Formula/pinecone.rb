@@ -5,12 +5,12 @@
 class Pinecone < Formula
   desc "Pinecone CLI"
   homepage "https://www.pinecone.io"
-  version "0.0.59"
+  version "0.0.60"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/pinecone-io/cli/releases/download/v0.0.59/pc_Darwin_all.tar.gz"
-    sha256 "a1fb4046b9b17cf320503a12ff9faab78337c51dd5f78c69a1bdbfffeef720c9"
+    url "https://github.com/pinecone-io/cli/releases/download/v0.0.60/pc_Darwin_all.tar.gz"
+    sha256 "4ce277dbe91d366f3c34787c8a13073aa4405c117e94c8e71c26590523b2f887"
 
     def install
       bin.install "pc"
@@ -20,17 +20,17 @@ class Pinecone < Formula
       man1.install Dir["man/man1/*.1"]
 
       # Add aliases: pc*.1 -> pinecone*.1, etc
-      Dir["man/man1/*.1"].each do |src|
+      Dir[man1/"pc*.1"].each do |src|
         dest = File.basename(src).sub(/\Apc\b/, "pinecone") # Replace leading "pc" with "pinecone"
-        man1.install src => dest
+        man1.install_symlink src => dest
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinecone-io/cli/releases/download/v0.0.59/pc_Linux_x86_64.tar.gz"
-      sha256 "6a1120c413c6799d7c25a4ee252eaffe266125223db5548cb838f5dee561f238"
+      url "https://github.com/pinecone-io/cli/releases/download/v0.0.60/pc_Linux_x86_64.tar.gz"
+      sha256 "9c6c5bd82a90263adabc6268bbd62d501dd52bbc8a3c46c8b6807a8db8658923"
       def install
         bin.install "pc"
         bin.install_symlink "pc" => "pinecone"
@@ -39,15 +39,15 @@ class Pinecone < Formula
         man1.install Dir["man/man1/*.1"]
 
         # Add aliases: pc*.1 -> pinecone*.1, etc
-        Dir["man/man1/*.1"].each do |src|
+        Dir[man1/"pc*.1"].each do |src|
           dest = File.basename(src).sub(/\Apc\b/, "pinecone") # Replace leading "pc" with "pinecone"
-          man1.install src => dest
+          man1.install_symlink src => dest
         end
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinecone-io/cli/releases/download/v0.0.59/pc_Linux_arm64.tar.gz"
-      sha256 "54d5b2a2b9fee87885252116c1aa9871fb37540ded1e81463ad39d6ce1b2f697"
+      url "https://github.com/pinecone-io/cli/releases/download/v0.0.60/pc_Linux_arm64.tar.gz"
+      sha256 "fcf76c2a6211151b95fc6792754744ae40bc3d27a7473bbc214297a9bff5f138"
       def install
         bin.install "pc"
         bin.install_symlink "pc" => "pinecone"
@@ -56,9 +56,9 @@ class Pinecone < Formula
         man1.install Dir["man/man1/*.1"]
 
         # Add aliases: pc*.1 -> pinecone*.1, etc
-        Dir["man/man1/*.1"].each do |src|
+        Dir[man1/"pc*.1"].each do |src|
           dest = File.basename(src).sub(/\Apc\b/, "pinecone") # Replace leading "pc" with "pinecone"
-          man1.install src => dest
+          man1.install_symlink src => dest
         end
       end
     end
