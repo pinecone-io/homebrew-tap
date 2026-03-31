@@ -7,22 +7,28 @@ cask "pinecone" do
       f.delete if f.exist? || f.symlink?
     end
   end
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", staged_path.to_s]
+    end
+  end
 
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
     url "https://github.com/pinecone-io/cli/releases/download/v#{version}/pc_Darwin_all.tar.gz"
-    sha256 "10bd10f10828d5b0cd3dc0ed2a84e24180a7da8cb0f2b3237a8542962b34fc52"
+    sha256 "b8b7aed8bd55d17eef4bd9701bbab28448a820e5cf8fb54fe49d79ddde6fa480"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pinecone-io/cli/releases/download/v#{version}/pc_Linux_x86_64.tar.gz"
-      sha256 "1eb6a29daa76b77dcaa9fb27191a7e586af72702f118401b791c17b7e51c18c8"
+      sha256 "1af5912fad734d444620bf4c75be150e6667867ec7ae1dce34475d9acad91ff3"
     end
     on_arm do
       url "https://github.com/pinecone-io/cli/releases/download/v#{version}/pc_Linux_arm64.tar.gz"
-      sha256 "e1d2950d0cd0ea0c65ede3f7639158a47bb519ab74b817510184f8ce8024cbf9"
+      sha256 "0248fe1e81f7c17d0a8d2798405cc2e0dc099d6d3ea0ceb6eb4b55253c0c7697"
     end
   end
 
