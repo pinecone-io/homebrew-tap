@@ -14,21 +14,21 @@ cask "pinecone" do
     end
   end
 
-  version "0.4.4"
+  version "0.4.5"
 
   on_macos do
     url "https://github.com/pinecone-io/cli/releases/download/v#{version}/pc_Darwin_all.tar.gz"
-    sha256 "0aa23fc30109e240c5ba32516a8246a0dc6fcc1419550fcf079be83c0b8f303a"
+    sha256 "3f9c294e9d73e75b42883e75cebfcef6e3030aa80746aa6d59863a451bb57ddf"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pinecone-io/cli/releases/download/v#{version}/pc_Linux_x86_64.tar.gz"
-      sha256 "4b73a762784b9da95564f65a70fbef4f033d74b1320fc01febbe3e0abc7bfea0"
+      sha256 "fb484321050f90c3871879edbcf95dbfd1cc61abbb362759f17ffaa49ca3d5bb"
     end
     on_arm do
       url "https://github.com/pinecone-io/cli/releases/download/v#{version}/pc_Linux_arm64.tar.gz"
-      sha256 "f17ac60667d0e2e48618dd79f58a7e60e76a6525cdae8ad03c9d7a28b42a854e"
+      sha256 "17eedff9c02488930b4b62d95fcf439cd4fca897d8988a9a41682178d699ebab"
     end
   end
 
